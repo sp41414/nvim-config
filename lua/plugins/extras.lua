@@ -1,10 +1,10 @@
 return {
-    {
-        "mbbill/undotree",
-        config = function()
-            vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-        end
-    },
+	{
+		"mbbill/undotree",
+		config = function()
+			vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+		end,
+	},
 	{
 		"folke/zen-mode.nvim",
 		opts = {
@@ -54,5 +54,11 @@ return {
 				},
 			})
 		end,
+	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+		opts = {},
 	},
 }
