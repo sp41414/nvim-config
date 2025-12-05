@@ -2,8 +2,8 @@ return {
 	{
 		"folke/trouble.nvim",
 		opts = {
-            icons = false,
-        }, -- for default options, refer to the configuration section for custom setup.
+			icons = false,
+		}, -- for default options, refer to the configuration section for custom setup.
 		cmd = "Trouble",
 		keys = {
 			{
