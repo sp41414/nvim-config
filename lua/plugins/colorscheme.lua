@@ -13,6 +13,12 @@ return {
 					Normal = { bg = "#000000" },
 					NormalNC = { bg = "#000000" },
 					NormalFloat = { bg = "#000000" },
+					FloatBorder = { fg = "subtle", bg = "#000000" },
+					FloatTitle = { bg = "#000000" },
+					DiagnosticFloatingError = { bg = "#000000" },
+					DiagnosticFloatingWarn = { bg = "#000000" },
+					DiagnosticFloatingInfo = { bg = "#000000" },
+					DiagnosticFloatingHint = { bg = "#000000" },
 				},
 			})
 

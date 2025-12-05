@@ -40,6 +40,13 @@ autocmd("LspAttach", {
 	end
 })
 
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = true,
+	underline = false,
+	float = { border = "rounded" }
+})
+
 -- END
 
 -- Setup lazy.nvim
