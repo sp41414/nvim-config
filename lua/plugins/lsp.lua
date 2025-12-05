@@ -9,6 +9,11 @@ return {
 				"pyright", "yaml_ls", "bashls",
 				"marksman", "fish_lsp", "tailwindcss"
 			},
+			handlers = {
+				function (server)
+					require("lspconfig")[server].setup({})
+				end
+			}
 		},
 		dependencies = {
 			{
