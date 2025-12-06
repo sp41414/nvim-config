@@ -82,11 +82,11 @@ return {
 		event = "VeryLazy",
 		opts = {},
 	},
-	{
-		"okuuva/auto-save.nvim",
-		event = { "InsertLeave", "TextChanged" },
-		opts = {},
-	},
+	-- {
+	-- 	"okuuva/auto-save.nvim",
+	-- 	event = { "InsertLeave", "TextChanged" },
+	-- 	opts = {},
+	-- },
 	{
 		"folke/todo-comments.nvim",
 		event = "VeryLazy",
@@ -98,5 +98,17 @@ return {
 		event = "VeryLazy",
 		build = ":Cord update",
 		-- opts = {},
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		event = "BufReadPre",
+		config = function()
+			require("colorizer").setup({
+				"*",
+				user_default_options = {
+					mode = "background",
+				},
+			})
+		end,
 	},
 }

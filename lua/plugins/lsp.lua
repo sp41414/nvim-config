@@ -25,6 +25,47 @@ return {
 					local capabilities = require("cmp_nvim_lsp").default_capabilities()
 					require("lspconfig")[server].setup({ capabilities = capabilities })
 				end,
+				tailwindcss = function()
+					require("lspconfig").tailwindcss.setup({
+						filetypes = {
+							"html",
+							"css",
+							"scss",
+							"javascript",
+							"javascriptreact",
+							"typescript",
+							"typescriptreact",
+							"vue",
+							"svelte",
+						},
+						settings = {
+							tailwindCSS = {
+								experimental = {
+									classRegex = {
+										"tw`([^`]*)",
+										'tw="([^"]*)',
+										'tw={"([^"}]*)',
+										"tw\\.\\w+`([^`]*)",
+										"tw\\(.*?\\)`([^`]*)",
+									},
+								},
+							},
+						},
+					})
+				end,
+				emmet_ls = function()
+					require("lspconfig").emmet_ls.setup({
+						filetypes = {
+							"html",
+							"css",
+							"scss",
+							"javascript",
+							"javascriptreact",
+							"typescript",
+							"typescriptreact",
+						},
+					})
+				end,
 			},
 		},
 		dependencies = {
