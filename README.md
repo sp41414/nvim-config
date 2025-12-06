@@ -14,7 +14,7 @@
     - [Prerequisites](#prerequisites)
     - [Install](#install)
     - [Post-Install](#post-install)
-  - [Key Bindings](#key-bindings) - [General](#general) - [LSP](#lsp) - [Git](#git-1) - [Editing](#editing-1) - [Completion](#completion) - [Navigation](#navigation-1)
+  - [Key Bindings](#key-bindings) - [General](#general) - [LSP](#lsp) - [Editing](#editing-1) - [Completion](#completion) - [Navigation](#navigation-1)
   <!--toc:end-->
 
 ## Plugin List
