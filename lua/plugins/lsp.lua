@@ -4,25 +4,54 @@ return {
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
 			ensure_installed = {
-				"lua_ls", "rust_analyzer", "ts_ls",
-				"clangd", "gopls", "jdtls",
-				"cssls", "html", "jsonls",
-				"pyright", "yaml_ls", "bashls",
-				"marksman", "fish_lsp", "tailwindcss"
+				"lua_ls",
+				"rust_analyzer",
+				"ts_ls",
+				"clangd",
+				"gopls",
+				"jdtls",
+				"cssls",
+				"html",
+				"jsonls",
+				"pyright",
+				"yamlls",
+				"bashls",
+				"marksman",
+				"fish_lsp",
+				"tailwindcss",
 			},
 			handlers = {
-				function (server)
+				function(server)
 					local capabilities = require("cmp_nvim_lsp").default_capabilities()
 					require("lspconfig")[server].setup({ capabilities = capabilities })
-				end
-			}
+				end,
+			},
 		},
 		dependencies = {
 			{
 				"mason-org/mason.nvim",
-				opts = { }
+				opts = {},
 			},
 			"neovim/nvim-lspconfig",
+		},
+	},
+	-- formatter tools
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		dependencies = { "mason-org/mason.nvim" },
+		opts = {
+			ensure_installed = {
+				"stylua",
+				"black",
+				"isort",
+				"prettierd",
+				"prettier",
+				"clang-format",
+				"google-java-format",
+				"shfmt",
+			},
+			auto_update = false,
+			run_on_start = true,
 		},
 	},
 	-- cmp autocompletion
@@ -97,18 +126,61 @@ return {
 			cmp.setup.cmdline("/", {
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = {
-					{ name = "buffer" }
-				}
+					{ name = "buffer" },
+				},
 			})
 
 			cmp.setup.cmdline(":", {
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = cmp.config.sources({
-					{ name = "path" }
+					{ name = "path" },
 				}, {
-					{ name = "cmdline" }
-				})
+					{ name = "cmdline" },
+				}),
 			})
-		end
+		end,
+	},
+	-- conform formatter
+	{
+		"stevearc/conform.nvim",
+		event = { "BufWritePre" },
+		cmd = { "ConformInfo" },
+		keys = {
+			{
+				"<leader>f",
+				function()
+					require("conform").format({ async = true, lsp_fallback = true })
+				end,
+				mode = "",
+				desc = "Format buffer",
+			},
+		},
+		opts = {
+			formatters_by_ft = {
+				lua = { "stylua" },
+				python = { "isort", "black" },
+				javascript = { "prettierd", "prettier", stop_after_first = true },
+				typescript = { "prettierd", "prettier", stop_after_first = true },
+				javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+				typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+				json = { "prettierd", "prettier", stop_after_first = true },
+				html = { "prettierd", "prettier", stop_after_first = true },
+				css = { "prettierd", "prettier", stop_after_first = true },
+				yaml = { "prettierd", "prettier", stop_after_first = true },
+				markdown = { "prettierd", "prettier", stop_after_first = true },
+				rust = { "rustfmt", lsp_format = "fallback" },
+				go = { "goimports", "gofmt" },
+				c = { "clang_format" },
+				cpp = { "clang_format" },
+				java = { "google-java-format" },
+				sh = { "shfmt" },
+				bash = { "shfmt" },
+				fish = { "fish_indent" },
+			},
+			format_on_save = {
+				timeout_ms = 500,
+				lsp_format = "fallback",
+			},
+		},
 	},
 }
