@@ -36,7 +36,6 @@
 ### Navigation
 
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
-- [oil.nvim](https://github.com/stevearc/oil.nvim) - File explorer
 - [trouble.nvim](https://github.com/folke/trouble.nvim) - Diagnostics list
 
 ### Editing
@@ -91,15 +90,15 @@ nvim
 
 ### General
 
-| Key          | Action             |
-| ------------ | ------------------ |
-| `<leader>ff` | Find files         |
-| `<leader>fg` | Live grep          |
-| `<leader>fb` | Find buffers       |
-| `<leader>f`  | Format buffer      |
-| `<leader>pv` | Open file explorer |
-| `<leader>u`  | Toggle undotree    |
-| `<leader>z`  | Toggle zen mode    |
+| Key          | Action                     |
+| ------------ | -------------------------- |
+| `<leader>ff` | Find files                 |
+| `<leader>fg` | Live grep                  |
+| `<leader>fb` | Find buffers               |
+| `<leader>f`  | Format buffer              |
+| `<leader>pv` | Open file explorer (netrw) |
+| `<leader>u`  | Toggle undotree            |
+| `<leader>z`  | Toggle zen mode            |
 
 ### LSP
 
