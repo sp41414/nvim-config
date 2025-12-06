@@ -1,12 +1,17 @@
 return {
 	{
 		"mbbill/undotree",
+		cmd = "UndotreeToggle",
 		config = function()
 			vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 		end,
 	},
 	{
 		"folke/zen-mode.nvim",
+		cmd = "ZenMode",
+		keys = {
+			{ "<leader>z", "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
+		},
 		opts = {
 			kitty = {
 				enabled = true,
@@ -60,5 +65,38 @@ return {
 		event = "InsertEnter",
 		config = true,
 		opts = {},
+	},
+	{
+		"numToStr/Comment.nvim",
+		event = "VeryLazy",
+		opts = {},
+		keys = {
+			{ "gcc", mode = "n", desc = "Comment toggle current line" },
+			{ "gc", mode = { "n", "o" }, desc = "Comment toggle linewise" },
+			{ "gc", mode = "x", desc = "Comment toggle linewise (visual)" },
+		},
+	},
+	{
+		"kylechui/nvim-surround",
+		version = "*",
+		event = "VeryLazy",
+		opts = {},
+	},
+	{
+		"okuuva/auto-save.nvim",
+		event = { "InsertLeave", "TextChanged" },
+		opts = {},
+	},
+	{
+		"folke/todo-comments.nvim",
+		event = "VeryLazy",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
+	{
+		"vyfor/cord.nvim",
+		event = "VeryLazy",
+		build = ":Cord update",
+		-- opts = {},
 	},
 }
