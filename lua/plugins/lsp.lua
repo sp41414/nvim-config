@@ -19,7 +19,7 @@ return {
                 "marksman",
                 "fish_lsp",
                 "tailwindcss",
-                "biome"
+                "eslint"
             },
             handlers = {
                 function(server)
@@ -90,6 +90,7 @@ return {
                 -- "prettierd",
                 -- "prettier",
                 "biome",
+                "eslint_d",
                 "clang-format",
                 "google-java-format",
                 "shfmt",
@@ -203,10 +204,10 @@ return {
             formatters_by_ft = {
                 lua = { "stylua" },
                 python = { "isort", "black" },
-                javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
-                typescript = { "biome", "prettierd", "prettier", stop_after_first = true },
-                javascriptreact = { "biome", "prettierd", "prettier", stop_after_first = true },
-                typescriptreact = { "biome", "prettierd", "prettier", stop_after_first = true },
+                javascript = { "biome", "eslint_d", "prettierd", "prettier", stop_after_first = true },
+                typescript = { "biome", "eslint_d", "prettierd", "prettier", stop_after_first = true },
+                javascriptreact = { "biome", "eslint_d", "prettierd", "prettier", stop_after_first = true },
+                typescriptreact = { "biome", "eslint_d", "prettierd", "prettier", stop_after_first = true },
                 json = { "biome", "prettierd", "prettier", stop_after_first = true },
                 html = { "biome", "prettierd", "prettier", stop_after_first = true },
                 css = { "biome", "prettierd", "prettier", stop_after_first = true },
