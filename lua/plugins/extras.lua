@@ -93,12 +93,12 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {},
 	},
-	{
-		"vyfor/cord.nvim",
-		event = "VeryLazy",
-		build = ":Cord update",
-		-- opts = {},
-	},
+	-- {
+	-- 	"vyfor/cord.nvim",
+	-- 	event = "VeryLazy",
+	-- 	build = ":Cord update",
+	-- 	-- opts = {},
+	-- },
 	{
 		"norcalli/nvim-colorizer.lua",
 		event = "BufReadPre",
