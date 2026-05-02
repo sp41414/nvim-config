@@ -1,12 +1,14 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
+		branch = "main",
 		build = ":TSUpdate",
 		opts = {
 			ensure_installed = {
 				"c",
 				"lua",
 				"markdown",
+				"markdown_inline",
 				"javascript",
 				"typescript",
 				"css",
