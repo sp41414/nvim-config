@@ -93,25 +93,25 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" },
         opts = {},
     },
-    {
-        "vyfor/cord.nvim",
-        build = ":Cord update",
-        opts = {
-            display = {
-                theme = "minecraft",
-                flavor = "accent",
-            },
-            text = {
-                workspace = false,
-            },
-            extensions = {
-                persistent_timer = {},
-                diagnostics = {
-                    scope = "workspace",
-                },
-            }
-        },
-    },
+    -- {
+    --     "vyfor/cord.nvim",
+    --     build = ":Cord update",
+    --     opts = {
+    --         display = {
+    --             theme = "minecraft",
+    --             flavor = "accent",
+    --         },
+    --         text = {
+    --             workspace = false,
+    --         },
+    --         extensions = {
+    --             persistent_timer = {},
+    --             diagnostics = {
+    --                 scope = "workspace",
+    --             },
+    --         }
+    --     },
+    -- },
     {
         "catgoose/nvim-colorizer.lua",
         event = "BufReadPre",

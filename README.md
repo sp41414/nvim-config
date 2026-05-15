@@ -29,7 +29,7 @@
 
 ### UI
 
-- [rose-pine](https://github.com/rose-pine/neovim) - Colorscheme (custom black variant)
+- [catppuccin](https://github.com/catppuccin/nvim) - Colorscheme (custom ayu-dark like variant)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - Statusline
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Keybind hints
 
@@ -37,6 +37,7 @@
 
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
 - [trouble.nvim](https://github.com/folke/trouble.nvim) - Diagnostics list
+- [harpoon2.nvim](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Quick navigation between files
 
 ### Editing
 
@@ -64,7 +65,7 @@
 
 ### Prerequisites
 
-- Neovim >= 0.9.0
+- Neovim >= 0.10
 - Git
 - A [Nerd Font](https://www.nerdfonts.com/) (for icons)
 - ripgrep (for Telescope live grep)
@@ -99,6 +100,8 @@ nvim
 | `<leader>pv` | Open file explorer (netrw) |
 | `<leader>u`  | Toggle undotree            |
 | `<leader>z`  | Toggle zen mode            |
+| `;`          | Toggle vim command (:)     |
+| `<leader>x`  | Make the file executable   |
 
 ### LSP
 
