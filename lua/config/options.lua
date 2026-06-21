@@ -50,3 +50,11 @@ set.incsearch = true
 
 -- faster cursor hold
 set.updatetime = 50
+
+vim.cmd([[
+      highlight Keyword gui=bold
+      highlight Conditional gui=bold
+      highlight Operator gui=bold
+      highlight Type gui=bold
+      highlight Comment gui=italic
+]])
